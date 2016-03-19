@@ -10,7 +10,7 @@
   pregenerated_pem_path: "{{role_dir}}/files/nginx/dhparam.pem"
 
   # Check if you need to generate self signed certs
-  option_ssl_self_signed: false
+  option_ssl_self_signed: true
 
   app_domain: "vagrant.dev"
   app_host: "*"
