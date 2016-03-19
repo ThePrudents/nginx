@@ -15,13 +15,13 @@
     command: openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -subj "/C=EU/ST=Denial/L=Lovecity/O=Dis/CN={{fqdn}}" -keyout {{key}}.key  -out {{crt}}.crt
     when: ansible_os_family == "Debian"
     args:
-      chdir: tmp/
+      chdir: /tmp
     tags: ssl-self
 
   - name: SSL self certificate | Move files to target dir
     command: mv -t {{target_dir}} {{key}}.key {{crt}}.crt
     when: ansible_os_family == "Debian"
     args:
-      chdir: tmp/
+      chdir: /tmp
     sudo: yes
     tags: ssl-self
