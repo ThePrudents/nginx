@@ -1,3 +1,8 @@
+
+
+[![Build Status](https://travis-ci.org/ThePrudents/nginx.svg?branch=master)](https://travis-ci.org/ThePrudents/nginx)
+
+
 Usage example:
 
 roles:
